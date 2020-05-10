@@ -25,23 +25,32 @@ Finally, customize the Summernote image popover.
 
 ````javascript
 $(document).ready(function() {
-    $('#summernote').summernote({
-        popover: {
-            image: [
-                ['custom', ['imageAttributes']],
-                ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
-                ['float', ['floatLeft', 'floatRight', 'floatNone']],
-                ['remove', ['removeMedia']]
-            ],
-        },
-        lang: 'en-US', // Change to your chosen language
-        imageAttributes:{
-            icon:'<i class="note-icon-pencil"/>',
-            removeEmpty:false, // true = remove attributes | false = leave empty if present
-            disableUpload: false // true = don't display Upload Options | Display Upload Options
-        }
-    });
+  $('#summernote').summernote({
+    toolbar: [
+      ['style', ['bold', 'italic', 'underline', 'clear']],
+      ['fontsize', ['fontsize']],
+      ['insert', ['picture']],
+      ['view', ['fullscreen', 'codeview']],
+    ],
+    popover: {
+      image: [
+        ['custom', ['imageAttributes']],
+        ['image', ['resizeFull', 'resizeHalf', 'resizeQuarter', 'resizeNone']],
+        ['float', ['floatLeft', 'floatRight', 'floatNone']],
+        ['remove', ['removeMedia']]
+      ],
+    },
+    imageAttributes: {
+      icon: '<i class="note-icon-pencil"/>',
+      removeEmpty: false, // true = remove attributes | false = leave empty if present
+      disableUpload: false // true = don't display Upload Options | Display Upload Options
+    },
+    lang: 'en-US',
+
+  });
 });
+
+Demo link - https://jsfiddle.net/0tudbqgs/3/
 ````
 
 #### 4. Check out our other Summernote Plugins via our main Github page.
